@@ -8,22 +8,20 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
-
 body{
     font-family: 'Bruno Ace SC', sans-serif;
     line-height: 1.5;
-
 }
-
 a{
     color:inherit;
+    display: inline-block;
     text-decoration: none;
-
 }
 img{
     vertical-align: middle;
-    /* max-width: 100%; */
 }
+
+
 .container{
     margin: 0 auto;
     max-width: 1296px;
@@ -34,134 +32,155 @@ img{
 .text-right{
     text-align: right;
 }
-.title{
+.mr-24{/*推1gutter*/
+    margin-right: 24px;
+}
+.g-24{
+    gap: 24px;
+}
+.container h2,
+.profile-content > p{
     font-size: 64px;
 }
-:is(.header,.william-profile,.introduction,.footer){
+:is(.introduction-content,.about-me-content) > p{
+    font-size: 24px;
+}
+
+/*outerbox*/
+.nav,
+.header,
+.william-profile,
+.footer{
     background: #000;
     color:#fff;
 }
-
-
-
-.header{
+.nav{
     padding-top: 40px;
 }
-.profile-list{
+section:not(.contant-me){
+    padding-block: 160px;
+}
+.introduction{
+    color:#fff;
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/background-img.png?raw=true");
+}
+.contant-me{
+    padding-block:96px;
+    color:#fff;
+    background: linear-gradient(180deg, #050014 0%, rgba(1, 2, 30, 0.89) 100%);
+
+}
+/*scroll behave*/
+#contant-me{
+    scroll-margin-top: 25vh;
+}
+
+
+
+.nav-list{
     justify-content: space-between;
 }
-.profile-list li{
-    width: 306px;
+.nav-list li{
+    max-width: 306px;
 }
-.profile-list li:last-child{
-    width: 196px;
+.nav-list li:last-child{
+    max-width: 196px;
+}
+.nav-list li:is(:hover,:focus){
+    color:hsl(0 80% 75%/ .8);
 }
 
 .profile-content{
     padding-block:72px;
 }
-.william-profile{
+.profile-content{
     display: grid;
     place-content: center;
-    margin-left: 24px;
 }
-.william-profile > p{
-    font-size: 64px;
-}
-.william-profile .profile-name{
+.profile-content .profile-name{
     font-size: 128px;
     color:#00ffa3;
 }
 .profile-btn a{
+    text-align: center;
     background: #fff;
     padding: 12px 24px;
     color:#000;
     border-radius: 32px;
 }
-
-
-.introduction{
-    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/background-img.png?raw=true");
-    padding-block:160px;
+.profile-btn a:is(:hover,:focus){
+    transition: scale 500ms;
+    scale:1.05;
+    outline: 3px solid #000;
+    outline-offset: -5px;
 }
+
+
+
 .introduction-photo{
     gap:24px;
 }.introduction-content h2{
     margin-bottom: 36px;
 }
 .introduction-content p{
-    font-size: 24px;
     margin-bottom: 32px;
 }
 
 
-.about-me{
-    padding-block: 160px;
-}
 .about-me > .d-flex{
     flex-direction: row-reverse;
+    justify-content: space-around;
 }
-.about-me-card{
+.about-me-card-group{
+    color:#15161D;
     flex-wrap: wrap;
     min-width: 636px;
-    margin-right: 134px;
     padding-bottom: 8px;
-    gap: 24px;
-    
 }
 .about-me-content{
     max-width: 526px;
 }
 .about-me-content .title{
-   margin-bottom: 36px;
+    margin-bottom: 36px;
 }
 .about-me-content p{
-    font-size: 24px;
+    color:#15161D;
 }
-.about-me-card li{
+
+.about-me-card-group li{
     border: 1px solid #E3E3E3;
     padding: 16px;
     max-width: 306px;
 
     /*try css counter*/
-    counter-increment: card-order;
+    counter-increment: card-index;
 }
-.about-me-card li > *:not(:last-child){
-    margin-bottom: 4px;
-}
-.about-me-card:not(p){
+.about-me-card-group *:not(p){
     font-size: 20px;
 }
-.card-order::before{
-    content: "0" counter(card-order);
+.card-index::before{
+    content: "0" counter(card-index);
+}
+
+.about-me-card-group li > *:not(:last-child){
+    margin-bottom: 4px;
 }
 
 
-
-.contant-me{
-    scroll-margin-top: 25vh;
-
-    padding-block:96px;
-    background: linear-gradient(180deg, #050014 0%, rgba(1, 2, 30, 0.89) 100%);
-    color:#fff;
-}
-.contant-me  .d-flex{
+.contant-me > .d-flex{
     align-items: center;
-    
+}
+.contant-me h2{
+    margin-right: 16px;
 }
 .social-link{
+    margin-left: 113px;
     gap: 20px;
 }
-.social-link li:first-child img{
-    /*原圖比其他兩個過大，稍微調整*/
-    /* max-width: calc( 162px * (162/178));     */
-}
-.mr113{
-    margin-right: 113px;
-}
 .social-link img{
-    width: 162px;
+    max-width: 162px;
     aspect-ratio: 1;
+    object-fit: contain;
 }
 .social-link li:is(:hover,:focus){
     animation: tada 1s;
@@ -178,46 +197,47 @@ img{
     40%, 60%, 80% {transform: scale(1.05) rotate(-3deg);} 
     100% {transform: scale(1) rotate(0);} 
  } 
+.my-projects h2{
+    font-size: 64px;
 
-.my-projects{
-    padding-block: 160px;
-}
-
-.my-projects-title{
-    /*左邊推5(col+gutter)*/
     padding-left: calc(((1296px / 12) + 24px)*5);
     margin-bottom: 16px;
 }
-.my-projects-aside{
-    margin-right: 24px;
-}
-.my-projects-section > div{
-    gap: 24px;
-}
 .my-projects-section > div:first-child{
-
     margin-bottom: 28px;
 }
-
 .my-projects-article{
+    color:#15161D;
     flex-direction: column;
     justify-content: space-between;
 }
-.mr16{
-    margin-right: 1rem;
-}
-
 .my-projects-article-btn{
+    display: block;
     background: #000;
     color:#fff;
     padding:12px 24px;
     border-radius: 32px;
     align-self: start;
+
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
-
-
+.my-projects-article-btn::before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    border-radius: 32px;
+    background-color: green;
+    transform-origin: center left;
+    transform: scaleX(0);
+    transition: transform 500ms linear;
+  }
+  .my-projects-article-btn:is(:hover,:focus)::before {
+    transform: scaleY(1);
+  }
 .footer{
-    padding-block: 40px;
+    padding-block:40px;
     text-align: center;
 }
-

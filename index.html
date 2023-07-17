@@ -7,31 +7,31 @@
 </head>
 <body>
     <div class="wrap">
+        <nav class="nav">
+            <ul class="nav-list container d-flex">
+                <li>
+                    <p><a href="#">WILLIAM LEE</a></p>
+                </li>
+                <li>    
+                    <p><a href="#">BASED IN TAIWAN</a></p>
+                </li>
+                <li>
+                    <p><a href="#">CURRENTLY FRONT END ENGINEER AT HEXSCHOOL</a></p>
+                </li>
+                <li>
+                    <p class="text-right"><a href="#contant-me">CONTACT ME</a></p>
+                </li>
+            </ul>
+        </nav>
         <header class="header" id="header"> 
-                <ul class="profile-list container d-flex">
-                    <li>
-                        <p>WILLIAM LEE</p>
-                    </li>
-                    <li>
-                        <p>BASED IN TAIWAN</p>
-                    </li>
-                    <li>
-                        <p>CURRENTLY FRONT END ENGINEER AT HEXSCHOOL</p>
-                    </li>
-                    <li>
-                        <p class="text-right"><a href="#">CONTACT ME</a></p>
-                    </li>
-                </ul>
-            <div class="profile-content container d-flex">
-                <div class="img-wrap">
-                    <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/people.png?raw=true" alt="WILLIAM_selfile">
-                </div>
-                <h1 class="william-profile">
+            <div class=" william-profile container d-flex">
+                <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/people.png?raw=true" alt="WILLIAM_selfile" class="mr-24">
+                <h1 class="profile-content">
                     <p>Hi</p>
                     <p>I’m a front-end developer</p>
                     <p class="profile-name text-right">William</p>
                     <div class="profile-btn text-right">
-                        <a href="#contant-me">contact me<span><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/ec12423281aab560a26016d3cd5175f97e1e7e26/2023week2/arrow_outward.svg" alt="arrow_outward"></span></a>
+                        <a href="#contant-me">contact me<span><img src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/ec12423281aab560a26016d3cd5175f97e1e7e26/2023week2/arrow_outward.png" alt="arrow_outward"></span></a>
                     </div>
                 </h1>
             </div>
@@ -39,7 +39,7 @@
         <section class="introduction" id="introduction">
             <div class="container d-flex">
                 <div class="introduction-content">
-                    <h2 class="title">Introduction</h2>
+                    <h2>Introduction</h2>
                     <p>Hi, I'm William Lee, a Front-End Developer with a passion for building beautiful and responsive websites that provide an optimal user experience.</p>
                     <div class="sparkles">
                         <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/sparkle-sm.png?raw=true" alt="sparkle">
@@ -54,31 +54,31 @@
                 </div>
             </div>
         </section>
+
         <section class="about-me" id="about-me">
             <div class="container d-flex">
-                <!-- 練一下css counter -->
                 <div class="about-me-content">
-                    <h2 class="title">About Me</h2>
+                    <h2>About Me</h2>
                     <p>With over 5 years of experience, I'm proficient in HTML, CSS, JavaScript, jQuery, and React. I have a strong understanding of user experience design and accessibility. I'm always learning new technologies and techniques to stay up-to-date in the field.</p>
                 </div>
-                <ul class="about-me-card d-flex">
+                <ul class="about-me-card-group d-flex g-24">
                     <li>
-                        <div class="card-order"></div>
+                        <div class="card-index"></div>
                         <h3>Attention to Detail</h3>
                         <p>Meticulous code analysis and optimization.</p>
                     </li>
                     <li>
-                        <div class="card-order"></div>
+                        <div class="card-index"></div>
                         <h3>Adaptability</h3>
                         <p>Swift learning of new technologies.</p>
                     </li>
                     <li>
-                        <div class="card-order"></div>
+                        <div class="card-index"></div>
                         <h3>Problem Solver</h3>
                         <p>Identifying and resolving issues.</p>
                     </li>
                     <li>
-                        <div class="card-order"></div>
+                        <div class="card-index"></div>
                         <h3>Team Player</h3>
                         <p>Collaborates and shares ideas.</p>
                     </li>
@@ -86,14 +86,13 @@
                 
             </div>
         </section>
+
         <section class="contant-me" id="contant-me">
             <div class="container d-flex">
-                <h2 class="title contant-me-title mr16">CONTACT ME</h2>
-                <div class="mr113"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/trending_flat_black_24dp%201.png?raw=true" alt="link-arrow"></div>
+                <h2>CONTACT ME</h2>
+                <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/trending_flat_black_24dp%201.png?raw=true" alt="link-arrow">
                 <ul class="social-link d-flex">
-                    <!-- 改用其他同學弄好沒有box-shadow的圖 -->
-                    <!-- <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/discord.png?raw=true" alt="social-link-discord"></a> -->
-                    
+                    <!-- 有把box-shadow去掉 -->
                     <li><a href="#"><img src="./asset/img/discord.png" alt="social-link-discord"></a></li>
                     <li><a href="#"><img src="./asset/img/instagram.png" alt="social-link-ig"></a></li>
                     <li><a href="#"><img src="./asset/img/message.png" alt="social-link-message"></a></li>
@@ -101,27 +100,24 @@
             </div>
         </section>
         <section class="my-projects" id="my-projects">
-            <h2 class="my-projects-title  title container">My Projects</h2>
+            <h2 class="container">My Projects</h2>
             <div class="container d-flex">
-                <div class="project-group d-flex">
-                    <div class="my-projects-aside">
-                        <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/Rectangle%2010.png?raw=true" alt="my-project">
+                    <div class="my-projects-aside mr-24">
+                        <a href="#"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/Rectangle%2010.png?raw=true" alt="my-project"></a>
                     </div>
                     <div class="my-projects-section">
-                        <div class="d-flex">
-                            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/Rectangle%2015.png?raw=true" alt="my-project">
+                        <div class="d-flex g-24">
+                            <a href="#"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/Rectangle%2015.png?raw=true" alt="my-project"></a>
                             <div class="my-projects-article d-flex">
                                 <p>I've worked on a variety of websites, including e-commerce sites, blogs, and landing pages. I take pride in creating clean, efficient, and user-friendly code.</p>
-                                <a href="#" class="my-projects-article-btn">see more <span><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/arrow_outward-white.png?raw=true" alt=""></span></a>
+                                <a href="#" class="my-projects-article-btn">see more <span><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/arrow_outward-white.png?raw=true" alt="arrow_white"></span></a>
                             </div>
                         </div>
-                        <div class="my-projects-content d-flex">
-                            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/Rectangle%2014.png?raw=true" alt="my-project">
-                            <img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/Rectangle%2029.png?raw=true" alt="my-project">
+                        <div class="my-projects-content d-flex g-24">
+                            <a href="#"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/Rectangle%2014.png?raw=true" alt="my-project"></a>
+                            <a href="#"><img src="https://github.com/hexschool/2022-web-layout-training/blob/main/2023week2/Rectangle%2029.png?raw=true" alt="my-project"></a>
                         </div>
                     </div>
-                </div>
-
             </div>
         </section>
         <footer class="footer">
